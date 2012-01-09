@@ -1,0 +1,41 @@
+<h1>Awesome Chat</h1>
+
+<ul id="chat_container">
+<% @messages.each do |message| %>
+  <li><%= message.user %>: <%= message.content %></li>
+<% end %>
+</ul>
+
+<%= form_for(@message, :remote => true) do |f| %>
+  <div class="field">
+    <%= f.label :user %>
+    <%= f.text_field :user %>
+  </div>
+  <div class="field">
+    <%= f.label :content %><br />
+    <%= f.text_area :content %>
+  </div>
+  <div class="actions">
+    <%= f.submit, "Enviar" %>
+  </div>
+<% end %>
+
+
+
+
+  <script type="text/javascript">
+    // Enable pusher logging - don't include this in production
+    Pusher.log = function(message) {
+      if (window.console && window.console.log) window.console.log(message);
+    };
+
+    // Flash fallback logging - don't include this in production
+    WEB_SOCKET_DEBUG = true;
+
+    var pusher = new Pusher('1ecb3ae402bda1983f91');
+    var channel = pusher.subscribe('cool_chat');
+    channel.bind('message:create', function(data) {
+      $("#chat_container").append(data.content);
+
+    });
+  </script>

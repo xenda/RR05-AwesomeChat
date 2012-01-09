@@ -1,0 +1,12 @@
+%h1#editing.header 
+  Editing Message
+
+%a{:src => "http://google.com"}
+
+  %img{:height => "100", :width => "100"}
+
+= render 'form'
+
+= link_to "Show", @message
+|
+= link_to "Back", messages_path
