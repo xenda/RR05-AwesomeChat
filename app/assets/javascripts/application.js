@@ -35,7 +35,7 @@ function updateContentForOembed(element){
                         defaultOEmbedProvider: "embed.ly",
                         embedMethod: "append", 
                         maxWidth: 500,
-                        vimeo: { autoplay: true, maxWidth: 200, maxHeight: 200}  
+                        vimeo: { autoplay: false, maxWidth: 500, maxHeight: 300}  
                         });
 
   }

@@ -8,14 +8,10 @@
 
 <%= form_for(Message.new, :remote => true) do |f| %>
   <div class="field">
-    <%= f.label :user %>
+    <%= f.label :user, "Nick" %>
     <%= f.text_field :user %>
-  </div>
-  <div class="field">
-    <%= f.label :content %>
+    <%= f.label :content, "Mensaje" %>
     <%= f.text_field :content %>
-  </div>
-  <div class="actions">
     <%= f.submit "Enviar" %>
   </div>
 <% end %>

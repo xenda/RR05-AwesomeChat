@@ -1,3 +1,5 @@
+/* @override http://localhost:3000/assets/application.css?body=1 */
+
 /*
  * This is a manifest file that'll automatically include all the stylesheets available in this directory
  * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
@@ -5,3 +7,90 @@
  *= require_self
  *= require_tree . 
 */
+
+body {
+	background-image: url(/assets/vertical_cloth.png);
+}
+
+h1 {
+	font-family: 'Oldenburg', cursive;
+	color:  white;
+	font-size: 60px;
+}
+
+ul#chat_container {
+	padding: 0px;
+	margin: 10px;
+	background-color: white;	
+	box-shadow:
+	-webkit-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+-moz-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+ height: 450px;
+ overflow: scroll;
+}
+
+form#new_message.new_message {
+	margin: 10px;
+	background: white;
+	padding: 10px;
+background: rgb(255,255,255);
+background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2ZmZmZmZiIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlYWVhZWEiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(234,234,234,1) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(234,234,234,1)));
+background: -webkit-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+background: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(234,234,234,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eaeaea',GradientType=0 );
+}
+
+#new_message div.field label {
+	font: 20px 'Oldenburg', cursive;
+}
+input#message_user {
+	width: 150px;
+}
+input#message_content {
+	width: 700px;
+}
+
+#new_message div.field input {
+	padding: 10px;
+}
+input#message_user, 
+input#message_content {
+	padding: 10px;
+	font-size: 20px;
+	border: 0px;
+	background-color: #dbdede;
+	color: #353535;
+	outline: none;
+}
+
+input#message_user:focus, 
+input#message_content:focus {
+	background-color: #ffabae;
+}
+
+
+#chat_container li {
+	list-style-type: none;
+	margin-bottom: 10px;
+background-image: linear-gradient(bottom, rgb(240,240,240) 1%, rgb(255,255,255) 73%);
+background-image: -o-linear-gradient(bottom, rgb(240,240,240) 1%, rgb(255,255,255) 73%);
+background-image: -moz-linear-gradient(bottom, rgb(240,240,240) 1%, rgb(255,255,255) 73%);
+background-image: -webkit-linear-gradient(bottom, rgb(240,240,240) 1%, rgb(255,255,255) 73%);
+background-image: -ms-linear-gradient(bottom, rgb(240,240,240) 1%, rgb(255,255,255) 73%);
+
+background-image: -webkit-gradient(
+	linear,
+	left bottom,
+	left top,
+	color-stop(0.01, rgb(240,240,240)),
+	color-stop(0.73, rgb(255,255,255))
+);
+	padding: 20px;
+	font-family: 'The Girl Next Door', cursive;
+	font-size: 20px;
+}
