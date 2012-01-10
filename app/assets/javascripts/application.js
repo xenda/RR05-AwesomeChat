@@ -13,6 +13,18 @@ $(function() {
   updateContentForOembed("#chat_container");
 });
 
+function scrollToLastElement(){
+  
+  top = 0;
+
+  $("#chat_container li").each(function(index, item){
+    top += $(item).outerHeight();
+  });
+
+  $("#chat_container").scrollTop(top);
+
+}
+
 function updateContentForOembed(element){
   // We capture the Message content
   text = $(element).html();
