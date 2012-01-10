@@ -18,7 +18,7 @@ h1 {
 	font-size: 60px;
 }
 
-ul#chat_container {
+ul#chat_container, form {
 	padding: 0px;
 	margin: 10px;
 	background-color: white;	
@@ -26,8 +26,12 @@ ul#chat_container {
 	-webkit-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
 -moz-box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
 box-shadow: 1px 1px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+ul#chat_container {
  height: 450px;
  overflow: scroll;
+	
 }
 
 form#new_message.new_message {
@@ -91,6 +95,9 @@ background-image: -webkit-gradient(
 	color-stop(0.73, rgb(255,255,255))
 );
 	padding: 20px;
-	font-family: 'The Girl Next Door', cursive;
-	font-size: 20px;
+	font-size: 14px;
+}
+
+#chat_container li:nth-child(2n) {
+	color: #ff4e57;
 }
