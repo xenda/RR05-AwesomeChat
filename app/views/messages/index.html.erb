@@ -36,7 +36,7 @@
          message += "</li>"
 
       $("#chat_container").append(message);
-      $("#chat_container").scrollTop($("#chat_container li:last").scrollTop());
+      $("#chat_container").scrollTop($("#chat_container li:last").offset().top);
       $("#message_content").val("");
       $("#message_content").focus();
       updateContentForOembed("#message_" + data.id);
