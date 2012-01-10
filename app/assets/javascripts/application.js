@@ -15,13 +15,13 @@ $(function() {
 
 function scrollToLastElement(){
   
-  top = 0;
+  scrollingTop = 0;
 
   $("#chat_container li").each(function(index, item){
-    top += $(item).outerHeight();
+    scrollingTop += $(item).outerHeight();
   });
 
-  $("#chat_container").scrollTop(top);
+  $("#chat_container").scrollTop(scrollingTop);
 
 }
 
