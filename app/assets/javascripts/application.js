@@ -30,7 +30,13 @@ function updateContentForOembed(element){
   });
 
   $(element).html(text);
-  $(element + " .oembed").oembed();
+  $(element + " .oembed").oembed(null, 
+                        {
+                        defaultOEmbedProvider: "embed.ly",
+                        embedMethod: "append", 
+                        maxWidth: 500,
+                        vimeo: { autoplay: true, maxWidth: 200, maxHeight: 200}  
+                        });
 
   }
 
